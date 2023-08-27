@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
-import ReadyImage from "../../assets/ready-image.png";
+import ReadyImage from "../../assets/ready-image.webp";
 
 function ReadeToJoinSection() {
   return (

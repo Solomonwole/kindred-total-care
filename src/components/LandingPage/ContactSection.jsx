@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import ContactImage from "../../assets/contact-image.png";
+import ContactImage from "../../assets/contact-image.webp";
 import { EmailIcon, LocationIcon, PhoneIcon } from "../../assetsExport";
 
 function ContactSection() {

@@ -1,7 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { CheckIcon } from "../../assetsExport";
-import AboutImage from "../../assets/about.png";
+import AboutImage from "../../assets/about.webp";
 import { useNavigate } from "react-router-dom";
 
 function AboutUsSection() {

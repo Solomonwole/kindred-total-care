@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import PageHeader from "../components/PageHeader";
-import { Container } from "@mui/material";
 import serviceImage from "../assets/service-image.png";
+import FirstSection from "../components/services/FirstSection";
+import SpecialCare from "../components/services/SpecialCare";
+import Physical from "../components/services/Physical";
+import ContactSection from "../components/LandingPage/ContactSection";
 
 function Services() {
   useEffect(() => {
@@ -10,7 +13,10 @@ function Services() {
   return (
     <>
       <PageHeader title="Services" image={serviceImage} />
-      <Container>Services</Container>
+      <FirstSection />
+      <SpecialCare />
+      <Physical />
+      <ContactSection />
     </>
   );
 }
