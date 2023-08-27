@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PageHeader from "../components/PageHeader";
-import aboutImage from "../assets/about-image.png";
+import aboutImage from "../assets/about-image.webp";
 import Mission from "../components/about/Mission";
 import WhoWeAre from "../components/about/WhoWeAre";
 import Team from "../components/about/Team";
