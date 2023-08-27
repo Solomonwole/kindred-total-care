@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { QuoteLeft, QuoteRight } from "../../assetsExport";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+// import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 function ClientReviewSection() {
   const [activeStep, setActiveStep] = useState(0);
@@ -22,6 +22,8 @@ function ClientReviewSection() {
           <Box mt={5} sx={{ position: "relative", minHeight: "178px" }}>
             <Carousel
               onChange={handleStepChange}
+              autoPlay
+              infiniteLoop
               swipeable={true}
               showArrows={true}
               showStatus={false}
@@ -30,7 +32,7 @@ function ClientReviewSection() {
               renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
                   <Box>
-                    <BsArrowLeftCircleFill
+                    {/* <BsArrowLeftCircleFill
                       onClick={onClickHandler}
                       direction="prev"
                       label={label}
@@ -43,14 +45,14 @@ function ClientReviewSection() {
                         cursor: "pointer",
                       }}
                       color="#00000036"
-                    />
+                    /> */}
                   </Box>
                 )
               }
               renderArrowNext={(onClickHandler, hasNext, label) =>
                 hasNext && (
                   <Box>
-                    <BsArrowRightCircleFill
+                    {/* <BsArrowRightCircleFill
                       onClick={onClickHandler}
                       direction="next"
                       label={label}
@@ -63,7 +65,7 @@ function ClientReviewSection() {
                         cursor: "pointer",
                       }}
                       color="#00000036"
-                    />
+                    /> */}
                   </Box>
                 )
               }
@@ -140,8 +142,6 @@ const Pagination = ({ dots, index, onChangeIndex }) => (
         onClick={() => onChangeIndex(i)}
       />
     ))}
-
-    
   </Box>
 );
 
