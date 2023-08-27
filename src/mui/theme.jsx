@@ -42,15 +42,9 @@ const theme = createTheme({
       },
     },
     h2: {
-      fontSize: "40px",
+      fontSize: "25px",
       fontWeight: "600",
       color: "#000",
-      "@media (min-width:0px) and (max-width:360px)": {
-        fontSize: "35px",
-      },
-      "@media (min-width:360px) and (max-width:600px)": {
-        fontSize: "35px",
-      },
     },
     h3: {
       fontSize: "18px",

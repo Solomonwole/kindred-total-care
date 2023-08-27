@@ -1,10 +1,13 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import contactImage from "../assets/contactus-image.png";
 import { EmailIcon, LocationIcon, PhoneIcon } from "../assetsExport";
 
 function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [contactFill, setContactFill] = useState({});
 
   const handleChange = (event) => {

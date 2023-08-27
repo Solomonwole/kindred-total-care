@@ -38,7 +38,7 @@ function AboutUsSection() {
             </Box>
 
             <Box>
-              <Typography variant="h2" color="secondHeader" >
+              <Typography variant="h2" color="secondHeader" data-aos="fade-up">
                 About Us
               </Typography>
               <Box mt={3}>

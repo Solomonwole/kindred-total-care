@@ -19,7 +19,7 @@ function ClientReviewSection() {
             Client Reviews
           </Typography>
 
-          <Box mt={5} sx={{ position: "relative", minHeight: "178px" }}>
+          <Box mt={5}>
             <Carousel
               onChange={handleStepChange}
               autoPlay
@@ -108,7 +108,7 @@ export default ClientReviewSection;
 
 const TestyCard = ({ image, name, text }) => {
   return (
-    <Box sx={{ cursor: "pointer", mb: 8 }}>
+    <Box sx={{ cursor: "pointer", mb: 2 }}>
       <Stack spacing={3} justifyContent="center" alignItems="center">
         <Box sx={{ position: "relative" }}>
           <QuoteLeft style={{ position: "absolute", left: 0 }} />
