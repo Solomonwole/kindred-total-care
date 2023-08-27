@@ -1,7 +1,9 @@
 import { Avatar, Box, Container, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
-import SwipeableViews from "react-swipeable-views";
 import { QuoteLeft, QuoteRight } from "../../assetsExport";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 function ClientReviewSection() {
   const [activeStep, setActiveStep] = useState(0);
@@ -17,11 +19,66 @@ function ClientReviewSection() {
             Client Reviews
           </Typography>
 
-          <Box mt={5}>
-            <SwipeableViews
-              index={activeStep}
-              onChangeIndex={handleStepChange}
-              enableMouseEvents // Enable swipe on desktop
+          <Box mt={5} sx={{ position: "relative", minHeight: "178px" }}>
+            <Carousel
+              onChange={handleStepChange}
+              swipeable={true}
+              showArrows={true}
+              showStatus={false}
+              showThumbs={false}
+              showIndicators={true}
+              renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                hasPrev && (
+                  <Box>
+                    <BsArrowLeftCircleFill
+                      onClick={onClickHandler}
+                      direction="prev"
+                      label={label}
+                      size={50}
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        top: "30%",
+                        zIndex: 10,
+                        cursor: "pointer",
+                      }}
+                      color="#00000036"
+                    />
+                  </Box>
+                )
+              }
+              renderArrowNext={(onClickHandler, hasNext, label) =>
+                hasNext && (
+                  <Box>
+                    <BsArrowRightCircleFill
+                      onClick={onClickHandler}
+                      direction="next"
+                      label={label}
+                      size={50}
+                      style={{
+                        position: "absolute",
+                        right: 0,
+                        top: "30%",
+                        zIndex: 10,
+                        cursor: "pointer",
+                      }}
+                      color="#00000036"
+                    />
+                  </Box>
+                )
+              }
+              renderIndicator={({ isActive }, index) => {
+                return (
+                  <Box>
+                    {/* <Pagination
+                      dots={testimonials.length}
+                      index={activeStep}
+                      onChangeIndex={handleStepChange}
+                    /> */}
+                  </Box>
+                );
+              }}
+              selectedItem={activeStep}
             >
               {testimonials.map((testy, index) => (
                 <TestyCard
@@ -31,7 +88,8 @@ function ClientReviewSection() {
                   text={testy.text}
                 />
               ))}
-            </SwipeableViews>
+            </Carousel>
+
             <Pagination
               dots={testimonials.length}
               index={activeStep}
@@ -48,10 +106,10 @@ export default ClientReviewSection;
 
 const TestyCard = ({ image, name, text }) => {
   return (
-    <Box sx={{ cursor: "pointer" }}>
+    <Box sx={{ cursor: "pointer", mb: 8 }}>
       <Stack spacing={3} justifyContent="center" alignItems="center">
         <Box sx={{ position: "relative" }}>
-          <QuoteLeft style={{ position: "absolute" }} />
+          <QuoteLeft style={{ position: "absolute", left: 0 }} />
           <Typography align="center" mt={3}>
             {text}
           </Typography>
@@ -82,6 +140,8 @@ const Pagination = ({ dots, index, onChangeIndex }) => (
         onClick={() => onChangeIndex(i)}
       />
     ))}
+
+    
   </Box>
 );
 
