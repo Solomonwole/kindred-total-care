@@ -1,0 +1,10 @@
+export { ReactComponent as CheckIcon } from "./assets/check-icon.svg";
+export { ReactComponent as Homemaking } from "./assets/homemaking.svg";
+export { ReactComponent as Companion } from "./assets/companion.svg";
+export { ReactComponent as LiveCare } from "./assets/totalcare.svg";
+export { ReactComponent as SpecialCare } from "./assets/special-care.svg";
+export { ReactComponent as QuoteLeft } from "./assets/quote-left.svg";
+export { ReactComponent as QuoteRight } from "./assets/quote-right.svg";
+export { ReactComponent as EmailIcon } from "./assets/email-icon.svg";
+export { ReactComponent as PhoneIcon } from "./assets/phone-icon.svg";
+export { ReactComponent as LocationIcon } from "./assets/location-icon.svg";
