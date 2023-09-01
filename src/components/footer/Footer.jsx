@@ -32,8 +32,10 @@ function Footer() {
               <Stack spacing={2}>
                 <img src={Logo} alt="Kindred Total Care" className="logo" />
                 <Typography variant="body1" color="primary">
-                  Lorem ipsum dolor sit amet consectetur dolol drakgonil
-                  adipiscing elit aliquam mauris
+                  Our mission is to offer compassionate and personalized care
+                  for your loved ones, creating a comfortable and supportive
+                  environment tailored to the unique needs of elderly
+                  individuals.
                 </Typography>
 
                 <Box>
@@ -83,11 +85,11 @@ function Footer() {
                   <MdKeyboardDoubleArrowRight color="#30B832" /> Contact Us
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <a href="#contact">
                   <MdKeyboardDoubleArrowRight color="#30B832" /> Legal
                 </a>
-              </li>
+              </li> */}
             </Box>
 
             <Box>
@@ -114,23 +116,23 @@ function Footer() {
 
               <Stack direction="row" alignItems="center" spacing={2}>
                 <SocialIcon
-                  icon={<BiLogoFacebook size={20} color="#8D8BA7" />}
+                  icon={<BiLogoFacebook size={20} className="social" />}
                   link="https://facebook.com/"
                 />
                 <SocialIcon
-                  icon={<BsTwitter size={20} color="#8D8BA7" />}
+                  icon={<BsTwitter size={20} className="social" />}
                   link="https://twitter.com/"
                 />
                 <SocialIcon
-                  icon={<AiFillInstagram size={20} color="#8D8BA7" />}
+                  icon={<AiFillInstagram size={20} className="social" />}
                   link="https://instagram.com/"
                 />
                 <SocialIcon
-                  icon={<BsLinkedin size={20} color="#8D8BA7" />}
+                  icon={<BsLinkedin size={20} className="social" />}
                   link="https://linkedin.com/"
                 />
                 <SocialIcon
-                  icon={<BsYoutube size={20} color="#8D8BA7" />}
+                  icon={<BsYoutube size={20} className="social" />}
                   link="https://youtube.com/"
                 />
               </Stack>
@@ -181,6 +183,11 @@ const SocialIcon = ({ icon, link }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+
+          "&:hover": {
+            background:
+              "linear-gradient(180deg, #0DBBB4 0%, rgba(48, 184, 50, 0.44) 100%)",
+          },
         }}
       >
         {icon}

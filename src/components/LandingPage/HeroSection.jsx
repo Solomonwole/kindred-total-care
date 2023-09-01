@@ -7,13 +7,13 @@ function HeroSection() {
   const navigate = useNavigate();
   return (
     <Box
-    sx={{
-      marginTop: "10vh",
-      position: "relative",
-      width: "100vw",
-      height: { xs: "80vh", sm: "90vh" },
-      overflow: "hidden",
-    }}
+      sx={{
+        marginTop: "10vh",
+        position: "relative",
+        width: "100vw",
+        height: { xs: "80vh", sm: "90vh" },
+        overflow: "hidden",
+      }}
     >
       <Box
         data-aos="flip-down"
@@ -41,15 +41,19 @@ function HeroSection() {
           <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
             <Stack
               spacing={2}
-              sx={{ width: { xs: "100%", sm: "60%", md: "40%" } }}
+              sx={{ width: { xs: "100%", sm: "60%", md: "50%" } }}
               data-aos="fade-down-right"
             >
               <Typography variant="h1" color="primary">
-                Stay Comfortably Like Your Home
+                Think Care Beyond Measures
               </Typography>
               <Typography variant="body1" color="primary">
-                Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
-                phasellus mollis sit aliquam sit nullam neque ultrices.
+                Kindred Care embodies the actual definition of limitless care.
+                With each client, we create an environment in which the kindred
+                spirit grows, guaranteeing that your loved ones receive the best
+                possible care and attention. Trust us to keep our promise of
+                providing quality care because your well-being is our top
+                priority.
               </Typography>
               <Button
                 variant="contained"

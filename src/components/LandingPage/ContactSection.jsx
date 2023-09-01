@@ -6,9 +6,11 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ContactImage from "../../assets/contact-image.webp";
 import { EmailIcon, LocationIcon, PhoneIcon } from "../../assetsExport";
+import emailjs from "@emailjs/browser";
+import SuccessModal from "../modal/SuccessModal";
 
 function ContactSection() {
   const [contactForm, setContactForm] = useState({
@@ -16,6 +18,10 @@ function ContactSection() {
     email: "",
     message: "",
   });
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [sentModal, setSentModal] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -24,9 +30,37 @@ function ContactSection() {
       [name]: value,
     }));
   };
+
+
   const handleForm = (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    try {
+      emailjs.sendForm(
+        "service_i2tvadk",
+        "template_zo4u499",
+        form.current,
+        "zYEmvRRoBYin2UHqv"
+      );
+      setLoading(false);
+      setUserName(contactForm.fullName);
+      setContactForm({
+        fullName: "",
+        email: "",
+        message: "",
+      });
+      setSentModal(true);
+    } catch (error) {
+      setLoading(false);
+    }
   };
+
+  const handleClose = () => {
+    setSentModal(false);
+    setUserName("");
+  };
+
   return (
     <>
       <Box mt={10} mb={10} pb={5} id="contact">
@@ -60,9 +94,9 @@ function ContactSection() {
                     data-aos="fade-right"
                   >
                     <EmailIcon />
-                    <a href="mailto:example@kindredtotalcare.com">
+                    <a href="mailto:info@kindredtc.com">
                       <Typography variant="body1">
-                        Contact@kindredtotalcare.com
+                        info@kindredtc.com
                       </Typography>
                     </a>
                   </Stack>
@@ -73,8 +107,8 @@ function ContactSection() {
                     data-aos="fade-right"
                   >
                     <PhoneIcon />
-                    <a href="tel:+15953465655">
-                      <Typography variant="body1">+1 (595) 346 5655</Typography>
+                    <a href="tel:+18324063380">
+                      <Typography variant="body1">+1 (832) 406 3380</Typography>
                     </a>
                   </Stack>
                   <Stack
@@ -90,7 +124,7 @@ function ContactSection() {
                   </Stack>
                 </Stack>
 
-                <Box mt={4} component="form" onSubmit={handleForm}>
+                <Box mt={4} component="form" ref={form} onSubmit={handleForm}>
                   <Stack spacing={2}>
                     <TextField
                       type="text"
@@ -101,6 +135,7 @@ function ContactSection() {
                       onChange={handleChange}
                       sx={textStyle}
                       required
+                      disabled={loading}
                     />
                     <TextField
                       type="email"
@@ -111,6 +146,7 @@ function ContactSection() {
                       onChange={handleChange}
                       sx={textStyle}
                       required
+                      disabled={loading}
                     />
 
                     <TextField
@@ -122,10 +158,19 @@ function ContactSection() {
                       value={contactForm.message}
                       onChange={handleChange}
                       sx={textStyle}
+                      disabled={loading}
                     />
 
-                    <Button variant="contained" type="submit">
-                      Send Message
+                    <Button
+                      variant="contained"
+                      type="submit"
+                      disabled={loading}
+                    >
+                      {!loading ? (
+                        "Send Message"
+                      ) : (
+                        <span className="loader"></span>
+                      )}
                     </Button>
                   </Stack>
                 </Box>
@@ -134,6 +179,14 @@ function ContactSection() {
           </Box>
         </Container>
       </Box>
+
+      {sentModal && (
+        <SuccessModal
+          open={sentModal}
+          handleClose={handleClose}
+          name={userName}
+        />
+      )}
     </>
   );
 }

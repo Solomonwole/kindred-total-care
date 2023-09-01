@@ -54,7 +54,7 @@ function BestCareSection() {
                 <Box mt={4}>
                   <Button
                     variant="contained"
-                    onClick={() => navigate("/about-us")}
+                    onClick={() => navigate("/services")}
                   >
                     Learn More
                   </Button>

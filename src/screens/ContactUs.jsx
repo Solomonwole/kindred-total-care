@@ -1,14 +1,20 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import contactImage from "../assets/contactus-image.webp";
 import { EmailIcon, LocationIcon, PhoneIcon } from "../assetsExport";
+import emailjs from "@emailjs/browser";
+import SuccessModal from "../components/modal/SuccessModal";
 
 function ContactUs() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [contactFill, setContactFill] = useState({});
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [sentModal, setSentModal] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -20,6 +26,33 @@ function ContactUs() {
 
   const handleForm = (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    try {
+      emailjs.sendForm(
+        "service_i2tvadk",
+        "template_0yrzen8",
+        form.current,
+        "zYEmvRRoBYin2UHqv"
+      );
+      setLoading(false);
+      setUserName(contactFill.name);
+      setContactFill({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: "",
+      });
+      setSentModal(true);
+    } catch (error) {
+      setLoading(false);
+    }
+  };
+
+  const handleClose = () => {
+    setSentModal(false);
+    setUserName("");
   };
   return (
     <>
@@ -48,6 +81,7 @@ function ContactUs() {
               }}
               component="form"
               onSubmit={handleForm}
+              ref={form}
             >
               <Stack spacing={3}>
                 <Box
@@ -70,6 +104,7 @@ function ContactUs() {
                       placeholder="John Carter"
                       style={inputStyle}
                       required
+                      disabled={loading}
                     />
                   </Stack>
                   <Stack width="100%">
@@ -82,6 +117,7 @@ function ContactUs() {
                       placeholder="example@mail.com"
                       style={inputStyle}
                       required
+                      disabled={loading}
                     />
                   </Stack>
                 </Box>
@@ -106,6 +142,7 @@ function ContactUs() {
                       placeholder="+1 (123) 456 7898"
                       style={inputStyle}
                       required
+                      disabled={loading}
                     />
                   </Stack>
                   <Stack width="100%">
@@ -118,6 +155,7 @@ function ContactUs() {
                       placeholder="123, Road st, Brooklyn, New York"
                       style={inputStyle}
                       required
+                      disabled={loading}
                     />
                   </Stack>
                 </Box>
@@ -130,9 +168,10 @@ function ContactUs() {
                   rows="7"
                   style={inputStyle2}
                   required
+                  disabled={loading}
                 ></textarea>
-                <Button variant="contained" type="submit">
-                  Send Message
+                <Button variant="contained" type="submit" disabled={loading}>
+                  {!loading ? "Send Message" : <span className="loader"></span>}
                 </Button>
               </Stack>
             </Box>
@@ -146,16 +185,14 @@ function ContactUs() {
               <Stack spacing={2} data-aos="fade-left">
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <EmailIcon />
-                  <a href="mailto:example@kindredtotalcare.com">
-                    <Typography variant="body1">
-                      Contact@kindredtotalcare.com
-                    </Typography>
+                  <a href="mailto:info@kindredtc.com">
+                    <Typography variant="body1">info@kindredtc.com</Typography>
                   </a>
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <PhoneIcon />
-                  <a href="tel:+15953465655">
-                    <Typography variant="body1">+1 (595) 346 5655</Typography>
+                  <a href="tel:+18324063380">
+                    <Typography variant="body1">+1 (832) 406 3380</Typography>
                   </a>
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={2}>
@@ -169,6 +206,14 @@ function ContactUs() {
           </Box>
         </Box>
       </Container>
+
+      {sentModal && (
+        <SuccessModal
+          open={sentModal}
+          handleClose={handleClose}
+          name={userName}
+        />
+      )}
     </>
   );
 }

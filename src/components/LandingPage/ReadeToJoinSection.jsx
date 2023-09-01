@@ -1,8 +1,10 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import ReadyImage from "../../assets/ready-image.webp";
+import { useNavigate } from "react-router-dom";
 
 function ReadeToJoinSection() {
+  const navigate = useNavigate();
   return (
     <>
       <Box
@@ -39,7 +41,12 @@ function ReadeToJoinSection() {
               <Typography variant="h2" color="primary" mb={3} align="center">
                 Ready To Join The Family?
               </Typography>
-              <Button variant="contained" onClick={() => {}}>Get Started</Button>
+              <Button
+                variant="contained"
+                onClick={() => navigate("/contact-us")}
+              >
+                Get Started
+              </Button>
             </Box>
           </Container>
         </Box>

@@ -149,19 +149,19 @@ const testimonials = [
   {
     image:
       "https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    name: "Becky R.",
-    text: "Our aunt who suffered from parkinson's, lived alone for 90 years before we needed to transfer her to an assisted living facility in Iowa. We tried private caretakers but found them untrustworthy. We enlisted the help of Kindred Care who went above and beyond to find the best caregivers. They convened a group conference with her caretakers and family to ensure her happiness and meet our needs.",
+    name: "Sarah L.",
+    text: "I couldn't have asked for a better place for my mother. The care and compassion she receives at Kindred Total Care are exceptional. From the warm and welcoming staff to the comfortable and supportive environment, it truly feels like a home away from home. My family and I are grateful for the peace of mind we have knowing she's in the best hands.",
   },
   {
     image:
-      "https://images.pexels.com/photos/1937434/pexels-photo-1937434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    name: "Christina M.",
-    text: "Our aunt who suffered from parkinson's, lived alone for 90 years before we needed to transfer her to an assisted living facility in Iowa. We tried private caretakers but found them untrustworthy. We enlisted the help of Kindred Care who went above and beyond to find the best caregivers. They convened a group conference with her caretakers and family to ensure her happiness and meet our needs.",
+      "https://img.freepik.com/free-photo/businesswoman-executive-professional-success-concept_53876-137644.jpg?w=740&t=st=1693596796~exp=1693597396~hmac=54bc914b0ff455ffb1a79868cf9e8cec76686b6f31e69ac4fdb4566a94ba2fcc",
+    name: "Emily R.",
+    text: "Choosing Kindred Total Care for my aunt was one of the best decisions we ever made. The team here goes above and beyond to provide specialized memory care. They create an environment filled with understanding and patience. It's heartening to see my aunt so content and well-cared for. Thank you for your dedication!",
   },
   {
     image:
-      "https://images.pexels.com/photos/14950779/pexels-photo-14950779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    name: "Micheal E.",
-    text: "Our aunt who suffered from parkinson's, lived alone for 90 years before we needed to transfer her to an assisted living facility in Iowa. We tried private caretakers but found them untrustworthy. We enlisted the help of Kindred Care who went above and beyond to find the best caregivers. They convened a group conference with her caretakers and family to ensure her happiness and meet our needs.",
+      "https://img.freepik.com/free-photo/portrait-wise-person_52683-100915.jpg?w=740&t=st=1693596718~exp=1693597318~hmac=44229c3a5b528a9d198a0cd2fcdd385bae46cc7f3cb7bb3b04e63c5c73c1103d",
+    name: "John M.",
+    text: "I moved into Kindred Total Care after a long search for the right place. The care and attention to detail are remarkable. The staff treats every resident with respect and kindness. It's a community where I feel valued and at home. Kindred Total Care has truly enhanced my quality of life in my senior years.",
   },
 ];

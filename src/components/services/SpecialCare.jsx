@@ -1,8 +1,10 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import DemImage from "../../assets/dem.png";
+import { useNavigate } from "react-router-dom";
 
 function SpecialCare() {
+  const navigate = useNavigate();
   return (
     <>
       <Box mt={10}>
@@ -86,7 +88,9 @@ function SpecialCare() {
                         backgroundClip: "text",
                         webkitBackgroundClip: "text",
                         webkitTextFillColor: "transparent",
+                        cursor: "pointer",
                       }}
+                      onClick={() => navigate("/contact-us")}
                     >
                       Reach out to us today to learn more about our dementia
                       care services.
