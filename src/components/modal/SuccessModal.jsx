@@ -1,4 +1,11 @@
-import { Box, IconButton, Modal, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  IconButton,
+  Modal,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { MdClose } from "react-icons/md";
 
@@ -6,21 +13,23 @@ function SuccessModal({ open, handleClose, name }) {
   return (
     <>
       <Modal open={open} onClose={handleClose}>
-        <Box sx={style}>
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <IconButton onClick={handleClose} color="secondary">
-              <MdClose />
-            </IconButton>
+        <Container>
+          <Box sx={style}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <IconButton onClick={handleClose} color="secondary">
+                <MdClose />
+              </IconButton>
+            </Box>
+            <Stack spacing={1}>
+              <Typography variant="h4" align="center" color="secondary">
+                Thank you {name}
+              </Typography>
+              <Typography variant="body1" align="center" color="textPrimary">
+                Your message was sent successfully
+              </Typography>
+            </Stack>
           </Box>
-          <Stack spacing={1}>
-            <Typography variant="h4" align="center" color="secondary">
-              Thank you {name}
-            </Typography>
-            <Typography variant="body1" align="center" color="textPrimary">
-              Your message was sent successfully
-            </Typography>
-          </Stack>
-        </Box>
+        </Container>
       </Modal>
     </>
   );
