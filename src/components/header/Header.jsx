@@ -4,7 +4,9 @@ import {
   Button,
   Container,
   IconButton,
+  Stack,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -13,6 +15,8 @@ import { FiMenu } from "react-icons/fi";
 import { VscClose } from "react-icons/vsc";
 import theme from "../../mui/theme";
 import Logo from "../../assets/logo.svg";
+import { BsInstagram, BsPhoneFill, BsTwitter } from "react-icons/bs";
+import { BiLogoFacebook } from "react-icons/bi";
 
 function Header() {
   const navigate = useNavigate();
@@ -23,8 +27,60 @@ function Header() {
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
+          position="static"
+          sx={{
+            height: "5vh",
+            background: "#000",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Toolbar>
+            <Container>
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Stack direction="row" alignItems="center" spacing={1}>
+                  <BsPhoneFill color="#fff" />
+                  <a href="tel:+18324063380">
+                    <Typography variant="body1" color="primary">
+                      +1 (832) 406 3380
+                    </Typography>
+                  </a>
+                </Stack>
+
+                <Stack direction="row" alignItems="center" spacing={1}>
+                  <a
+                    href="https://facebook.com/ktc"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BiLogoFacebook color="#fff" />
+                  </a>
+                  <a
+                    href="https://instagram.com/ktc"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsInstagram color="#fff" />
+                  </a>
+                  <a
+                    href="https://twitter.com/ktc"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsTwitter color="#fff" />
+                  </a>
+                </Stack>
+              </Stack>
+            </Container>
+          </Toolbar>
+        </AppBar>
+        <AppBar
           data-aos="fade-down"
-          position="fixed"
+          position="static"
           sx={{
             minHeight: "70px",
             height: "10vh",
@@ -66,6 +122,14 @@ function Header() {
                       onClick={() => window.scrollTo(0, 0)}
                     >
                       Services
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/care-giver"
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      Care Giver
                     </NavLink>
                   </li>
                   <li>
@@ -135,6 +199,17 @@ function Header() {
                   }}
                 >
                   Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/care-giver"
+                  onClick={() => {
+                    handleClose();
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  Care Giver
                 </NavLink>
               </li>
               <li>

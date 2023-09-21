@@ -76,15 +76,24 @@ const theme = createTheme({
           textTransform: "none",
           minWidth: "90px",
           minHeight: "40px",
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "none",
+          },
         },
         contained: {
           color: "#fff",
           background:
             "var(--bluegree, linear-gradient(180deg, #0DBBB4 0%, rgba(48, 184, 50, 0.44) 100%))",
-          borderRadius: "10px",
+          borderRadius: "5px",
           height: "50px",
           width: "150px",
           fontSize: "15px",
+          "&:hover": {
+            boxShadow: "none",
+            background:
+              "var(--bluegree, linear-gradient(180deg, #0DBBB4 0%, rgba(48, 184, 50, 0.44) 100%))",
+          },
         },
       },
     },

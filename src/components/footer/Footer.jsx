@@ -100,7 +100,7 @@ function Footer() {
             </Box>
           </Box>
 
-          <Box mt={5} pt={5} sx={{ borderTop: "1px solid #D4D2E3" }}>
+          <Box mt={5} pt={5} sx={{ borderTop: "1px solid #d4d2e324" }}>
             <Box
               sx={{
                 display: "flex",

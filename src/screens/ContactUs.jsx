@@ -5,6 +5,7 @@ import contactImage from "../assets/contactus-image.webp";
 import { EmailIcon, LocationIcon, PhoneIcon } from "../assetsExport";
 import emailjs from "@emailjs/browser";
 import SuccessModal from "../components/modal/SuccessModal";
+import { Helmet } from "react-helmet";
 
 function ContactUs() {
   useEffect(() => {
@@ -56,6 +57,13 @@ function ContactUs() {
   };
   return (
     <>
+      <Helmet>
+        <title>Contact Us - Kindred Total Care</title>
+        <meta
+          name="description"
+          content="We are, at our core, a group of caregivers who care for you like family. Our main goal is to offer top-notch home care. We get in head first because it is what we do when your loved ones need help. Our techniques are distinctive, and we never compromise on quality. Our concern is genuine and our care is unfeigned."
+        />
+      </Helmet>
       <PageHeader title="Contact Us" image={contactImage} />
       <Container>
         <Box

@@ -28,9 +28,9 @@ export const mobileMenu = {
   display: { xs: "flex", sm: "none" },
   justifyContent: "center",
   alignItems: "center",
-  paddingTop: "15vh",
+  // paddingTop: "15vh",
   width: "100%",
-
+  height: "50%",
   background: "#fff",
   position: "fixed",
   zIndex: 10,

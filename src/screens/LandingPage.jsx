@@ -6,6 +6,7 @@ import BestCareSection from "../components/LandingPage/BestCareSection";
 import ClientReviewSection from "../components/LandingPage/ClientReviewSection";
 import ReadeToJoinSection from "../components/LandingPage/ReadeToJoinSection";
 import ContactSection from "../components/LandingPage/ContactSection";
+import { Helmet } from "react-helmet";
 
 function LandingPage() {
   useEffect(() => {
@@ -13,6 +14,7 @@ function LandingPage() {
   }, []);
   return (
     <>
+    <Helmet></Helmet>
       <HeroSection />
       <AboutUsSection />
       <ServicesSection />

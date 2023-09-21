@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <Box
       sx={{
-        marginTop: "10vh",
+        // marginTop: "10vh",
         position: "relative",
         width: "100vw",
         height: { xs: "80vh", sm: "90vh" },

@@ -6,6 +6,7 @@ import Footer from "../components/footer/Footer";
 import AboutUs from "../screens/AboutUs";
 import ContactUs from "../screens/ContactUs";
 import Services from "../screens/Services";
+import CareGiver from "../screens/CareGiver";
 
 function RouterScreen() {
   return (
@@ -17,6 +18,7 @@ function RouterScreen() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/care-giver" element={<CareGiver />} />
           <Route path="*" element={<LandingPage />} />
         </Routes>
         <Footer />
