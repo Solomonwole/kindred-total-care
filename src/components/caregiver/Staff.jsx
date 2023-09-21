@@ -100,41 +100,41 @@ const data = [
   {
     image:
       "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
-    fullName: "Katherine waterston",
+    fullName: "Oluwaranti Olagoroye",
     role: "FOUNDER/CEO",
     facebook: "",
     instagram: "",
     twitter: "",
-    text: "At Kindred Total Care, Katherine ensures that the each and every client of Kindred Total Care is looked after according to the company’s core mission, values and vision.",
+    text: "Oluwaranti's hands-on approach and deep empathy for clients and caregivers alike drive the company's culture of compassion, excellence, and innovation. Under her guidance, Kindred Total Care has established itself as a trusted and compassionate provider of adult home care, delivering personalized, high-quality services that enhance the well-being and independence of those they serve.",
   },
   {
     image:
       "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
-    fullName: "Katherine waterston",
-    role: "FOUNDER/CEO",
+    fullName: "Azeez Latifat",
+    role: "ADMINISTRATOR",
     facebook: "",
     instagram: "",
     twitter: "",
-    text: "At Kindred Total Care, Katherine ensures that the each and every client of Kindred Total Care is looked after according to the company’s core mission, values and vision.",
+    text: "As the Administrator, Azeez Latifat provides strong leadership within the organization. She oversees the day-to-day operations, guiding the staff and ensuring that they adhere to the company's mission and values. Her leadership sets the tone for a caring and professional work environment.",
   },
   {
     image:
       "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
-    fullName: "Katherine waterston",
-    role: "FOUNDER/CEO",
+    fullName: "Oluwaranti Olagoroye",
+    role: "ALT ADMINISTRATOR",
     facebook: "",
     instagram: "",
     twitter: "",
-    text: "At Kindred Total Care, Katherine ensures that the each and every client of Kindred Total Care is looked after according to the company’s core mission, values and vision.",
+    text: "Oluwaranti manages daily operations, coordinates care plans, and fosters a culture of empathy and professionalism in our team. She also builds strong relationships with families, caregivers, and healthcare professionals, all to provide personalized care solutions that empower individuals to maintain independence and dignity at home.",
   },
   {
     image:
       "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
-    fullName: "Katherine waterston",
-    role: "FOUNDER/CEO",
+    fullName: "Ayomide Adebanjo",
+    role: "SUPERVISOR",
     facebook: "",
     instagram: "",
     twitter: "",
-    text: "At Kindred Total Care, Katherine ensures that the each and every client of Kindred Total Care is looked after according to the company’s core mission, values and vision.",
+    text: "Ayomide oversees our team of caregivers, ensuring they deliver the highest quality care to our clients. She coordinates and manages daily activities, from scheduling caregivers to monitoring patient care plans, ensuring that each individual receives the personalized attention and support they deserve.",
   },
 ];
