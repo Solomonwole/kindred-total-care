@@ -12,6 +12,7 @@ import { BsPlusLg } from "react-icons/bs";
 import { BiMinus } from "react-icons/bi";
 import Image from "../../assets/faq.png";
 
+
 function Faq() {
   return (
     <Box mt={5} sx={{ background: "#141138", pt: { xs: 5, sm: 7 }, pb: 5 }}>
@@ -111,7 +112,7 @@ function Template({ title, text }) {
 const data = [
   {
     title: "What are some of the benefits I can receive?",
-    text: "Always Best Care is committed to offering our caregivers the best benefits in the industry, which may include: <ul><li>Health insurance plans</li><li>Supplemental insurance</li><li>401(k) program</li><li>Well-being programs</li><li>Mileage reimbursement</li><li>Earn wage access</li><li>Employee recognition program</li><li>Employee referral program</li><li>Paid training</li><li>PTO</li></ul>",
+    text: "Always Best Care is committed to offering our caregivers the best benefits in the industry, which may include: <ul><li>Well-being programs</li><li>Mileage reimbursement</li><li>Earn wage access</li><li>Employee recognition program</li><li>Employee referral program</li></ul>",
   },
   {
     title: "What does the training include?",
@@ -126,9 +127,5 @@ const data = [
       "Caregivers may be offered custom, fully flexible schedules that best fit their lifestyle.",
     text: "The length of time it takes to become a caregiver will depend on the state in which you are employed.",
   },
-  {
-    title:
-      "What are my career growth opportunities as an Always Best Care caregiver?",
-    text: "Although many caregivers are content with the role of providing care, some advance into different roles within an agency. This may include moving into an Ambassador, Lead Caregiver, Mentorship role, Scheduler, Recruiter, Care Manager, Client Service Representative, Sales Representative, or Operations Director.",
-  },
+ 
 ];

@@ -3,6 +3,7 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
+import Ranti from "../../assets/ranti.jpg";
 
 function Staff() {
   return (
@@ -98,8 +99,7 @@ function StaffComponent({
 
 const data = [
   {
-    image:
-      "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
+    image: `${Ranti}`,
     fullName: "Oluwaranti Olagoroye",
     role: "FOUNDER/CEO",
     facebook: "",
@@ -109,7 +109,7 @@ const data = [
   },
   {
     image:
-      "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
+      "https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg",
     fullName: "Azeez Latifat",
     role: "ADMINISTRATOR",
     facebook: "",
@@ -118,8 +118,7 @@ const data = [
     text: "As the Administrator, Azeez Latifat provides strong leadership within the organization. She oversees the day-to-day operations, guiding the staff and ensuring that they adhere to the company's mission and values. Her leadership sets the tone for a caring and professional work environment.",
   },
   {
-    image:
-      "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
+    image: `${Ranti}`,
     fullName: "Oluwaranti Olagoroye",
     role: "ALT ADMINISTRATOR",
     facebook: "",
@@ -129,7 +128,7 @@ const data = [
   },
   {
     image:
-      "https://img.freepik.com/free-photo/view-3d-woman_23-2150709984.jpg?t=st=1695259509~exp=1695263109~hmac=2a287dd63edaea69fb5e0d039868fc85cb4e04ff6d22d3f2751396026883f9b4&w=740",
+      "https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg",
     fullName: "Ayomide Adebanjo",
     role: "SUPERVISOR",
     facebook: "",
