@@ -119,7 +119,7 @@ function Footer() {
 								/>
 								<SocialIcon
 									icon={<BsTwitter size={20} className="social" />}
-									link="https://twitter.com/"
+									link="https://twitter.com/kindredtc.c"
 								/>
 								<SocialIcon
 									icon={<AiFillInstagram size={20} className="social" />}
@@ -129,10 +129,10 @@ function Footer() {
 									icon={<BsLinkedin size={20} className="social" />}
 									link="https://linkedin.com/"
 								/>
-								<SocialIcon
+								{/* <SocialIcon
 									icon={<BsYoutube size={20} className="social" />}
 									link="https://youtube.com/"
-								/>
+								/> */}
 							</Stack>
 						</Box>
 					</Box>
