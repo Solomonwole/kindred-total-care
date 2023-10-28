@@ -57,7 +57,11 @@ function StaffComponent({
 						display: "flex",
 						justifyContent: { xs: "center", sm: "flex-start" },
 					}}>
-					<img src={image} alt="" style={{ width: "235px", height: "235px" }} />
+					<img
+						src={image}
+						alt=""
+						style={{ width: "235px", height: "235px", objectFit: "cover" }}
+					/>
 				</Box>
 				<Typography variant="h4">{fullName}</Typography>
 				<Stack
